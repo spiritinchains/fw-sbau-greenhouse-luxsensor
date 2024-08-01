@@ -1,0 +1,16 @@
+
+# Eclipse specific files
+.metadata/
+RemoteSystemsTempFiles/
+.settings/
+Debug/
+Release
+*.launch
+
+# STM32Cube files
+*.mxproject
+
+# Other files
+.vscode
+
+
