@@ -55,9 +55,11 @@ loop (void)
 		float temp;
 		MAX44009_ReadLightHighResolution(&temp);
 		int32_t luxval = (int32_t) temp;
+		LOG(LOG_DEBUG, "Lux: %d", luxval);
 		luxval_high = (luxval & 0xFFFF0000) >> 16;
 		luxval_low = luxval & 0xFFFF;
 		get_lux_flag = false;
+
 	}
 
 	HAL_IWDG_Refresh(&hiwdg);
